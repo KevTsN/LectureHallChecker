@@ -1,0 +1,6 @@
+*.ics
+# must create your own if doesn't exist
+Favourites.txt
+.env
+.vscode/
+
