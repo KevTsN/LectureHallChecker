@@ -1,0 +1,1 @@
+This file is meant to retain the ScheduleFiles folder, even when it is empty, for git purposes.
