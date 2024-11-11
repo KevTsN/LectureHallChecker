@@ -53,7 +53,7 @@ if __name__ == "__main__":
             favouritesList.append(nf);
             ff.write(nf)
             ff.write("\n")
-            print("{newf} has been added to favourite courses".format(newf=nf))
+            print("{newf} has been added to favourite courses\n".format(newf=nf))
 
     ff.close()
 
