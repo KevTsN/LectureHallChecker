@@ -1,8 +1,8 @@
 # Lecture Hall Checker
 
-This Python script checks what classes are happening inside Carleton University's lecture halls at the time the script runs. 
-Download the **monthly** iCalendar files from the lecture halls you would like to use, then add them to the ScheduleFiles folder.
-Link to lecture halls: https://booking.carleton.ca/index.php?p=RoomSearch&r=1
+This Python script checks what classes are happening inside Carleton University's lecture halls at the time the script runs. <br>
+Download the **monthly** iCalendar files from the lecture halls you would like to use, then add them to the ScheduleFiles folder.<br>
+Link to lecture halls: https://booking.carleton.ca/index.php?p=RoomSearch&r=1 <br>
 
 ## Necessary Installations:
 >**PiP is required**
