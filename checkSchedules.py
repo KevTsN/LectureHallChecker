@@ -74,7 +74,7 @@ if __name__ == "__main__":
             startDiff = int( (startDt - today).total_seconds() / 60)
 
 
-            if startDt <= today <= endDt:
+            if (not "nextOnly" in sys.argv and startDt <= today <= endDt):
             
                 summary = str(event.get("SUMMARY"))
                 summary = summary.split(">", 1)
@@ -99,7 +99,7 @@ if __name__ == "__main__":
                 print("They will end at {fet}, which is {fem} minutes from now.\n".format(fet = endTime, fem = minEnd))
                                                                             
             #handling next courses
-            elif ("next" in sys.argv and startDiff < 180 and startDiff>0):
+            elif ("next" in sys.argv or "nextOnly" in sys.argv and startDiff < 180 and startDiff>0):
 
 
                 summary = str(event.get("SUMMARY"))
@@ -130,5 +130,5 @@ if __name__ == "__main__":
             if(nextCourse["course"] in favouritesSet):
                     print("FAVOURITE");
             
-            print("They will start at {fst}, which is {fsm} from now.".format(fst=nextCourse["startTime"], fsm = nextCourse["minToStart"]))
+            print("They will start at {fst}, which is {fsm} minutes from now.".format(fst=nextCourse["startTime"], fsm = nextCourse["minToStart"]))
             print("They will end at {fet}.\n".format(fet = nextCourse["endTime"]))

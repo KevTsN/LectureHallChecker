@@ -23,4 +23,6 @@ Run *python checkSchedules.py fav* in your terminal, and you will be shown your 
 ### Viewing next lecture:
 Run *python checkSchedules.py next* in your terminal, and the program will print out the next class that will happen in the lecture hall, in addition to the current one happening.
 
->The system arguments "next" and "fav" can both be used at the same time.
+To view only the next class happening, run *python checkSchedules.py nextOnly*. If you run both nextOnly and next, it will only show the next class, with the former argument overriding the latter's usual behaviour.
+
+>The system arguments "next", "nextOnly" and "fav" can all be used at the same time.
