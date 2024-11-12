@@ -3,7 +3,7 @@
 This Python script checks what classes are happening inside Carleton University's lecture halls at the time the script runs. <br>
 Download the **monthly** iCalendar files from the lecture halls you would like to use, then add them to the ScheduleFiles folder.<br>
 These files are named by Carleton's building and room code (i.e. AB 000 or AB 0000), which is crucial to correctly displaying lecture hall code names.<br>
-Merged classes will show two classes in the terminal, each with seperate course codes.<br>
+Merged classes will show two classes in the terminal, each with separate course codes.<br>
 
 [Link to lecture hall schedules](https://booking.carleton.ca/index.php?p=RoomSearch&r=1) <br>
 
@@ -20,7 +20,7 @@ After that runs, run "*pip install -r requirements.txt*" in your environment ter
 Run *python checkSchedules.py* in your terminal.
 
 ### Setting Favourites:
-*Favourites.txt* is a text file that holds one of your favourite courses on each line. These courses will show "FAVOURITE" abvoe them when the program runs if they are shown.<br>
+*Favourites.txt* is a text file that holds one of your favourite courses on each line. These courses will show "FAVOURITE" above them when the program runs if they are shown.<br>
 Run *python checkSchedules.py fav* in your terminal, and you will be shown your current favourite courses (from *Favourites.txt*). You will then be prompted to add new favourites, which will be added to Favourites.txt. The program will then run as normal, listing current courses/times.
 
 ### Viewing next lecture:
