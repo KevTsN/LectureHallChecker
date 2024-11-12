@@ -71,7 +71,7 @@ if __name__ == "__main__":
             startDt = event['DTSTART'].dt
             endDt = event['DTEND'].dt
         
-            startDiff = int( (startDt - today).total_seconds() / 60)
+            startDiff = int( (startDt-today).total_seconds() / 60)
 
 
             if (not "nextOnly" in sys.argv and startDt <= today <= endDt):
@@ -99,7 +99,7 @@ if __name__ == "__main__":
                 print("They will end at {fet}, which is {fem} minutes from now.\n".format(fet = endTime, fem = minEnd))
                                                                             
             #handling next courses
-            elif ("next" in sys.argv or "nextOnly" in sys.argv and startDiff < 180 and startDiff>0):
+            elif (("next" in sys.argv or "nextOnly" in sys.argv) and startDiff < 180 and startDiff>0):
 
 
                 summary = str(event.get("SUMMARY"))
