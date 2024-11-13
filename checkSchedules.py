@@ -83,7 +83,8 @@ if __name__ == "__main__":
                 course = toSplit[-1]
 
                 if(course[-1]=="F" or course[-1]=="W"):
-                    course = course.split(" ")[0]
+                    course = course.split(course[-1])[0]
+                    course = course.rstrip()
                 
                 endTime = endDt.time().strftime("%I:%M %p")
                 startTime = startDt.time().strftime("%I:%M %p")
@@ -109,7 +110,8 @@ if __name__ == "__main__":
                 course = toSplit[-1]
 
                 if(course[-1]=="F" or course[-1]=="W"):
-                    course = course.split(" ")[0]
+                    course = course.split(course[-1])[0]
+                    course = course.rstrip()
                 
                 endTime = endDt.time().strftime("%I:%M %p")
                 startTime = startDt.time().strftime("%I:%M %p")
@@ -125,10 +127,9 @@ if __name__ == "__main__":
             nextCourse = next(iter(nextDict.items())) #returns 0=key, 1=value /dict
             nextCourse = nextCourse[1] #redefine as the value, which is a dict
 
-            print("{courseName} is the next class in {hallName}".format(courseName=nextCourse["course"], hallName = path.stem))
-
             if(nextCourse["course"] in favouritesSet):
                     print("FAVOURITE");
-            
+            print("{courseName} is the next class in {hallName}".format(courseName=nextCourse["course"], hallName = path.stem))
+     
             print("They will start at {fst}, which is {fsm} minutes from now.".format(fst=nextCourse["startTime"], fsm = nextCourse["minToStart"]))
             print("They will end at {fet}.\n".format(fet = nextCourse["endTime"]))
