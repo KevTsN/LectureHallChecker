@@ -82,8 +82,9 @@ if __name__ == "__main__":
                 toSplit = toSplit.split("-")
                 course = toSplit[-1]
 
+
                 if(course[-1]=="F" or course[-1]=="W"):
-                    course = course.split(course[-1])[0]
+                    course = course[0:-2]
                     course = course.rstrip()
                 
                 endTime = endDt.time().strftime("%I:%M %p")
