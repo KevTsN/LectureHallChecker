@@ -4,6 +4,17 @@ import datetime
 import sys
 import re
 
+def toCourse(summary):
+    summary = summary.split(">", 1)
+    toSplit = summary[-1].split("<",1)[0]
+    toSplit = toSplit.split("-")
+    course = toSplit[-1]
+
+    if(course[-1]=="F" or course[-1]=="W"):
+        course = course[0:-2]
+        course = course.rstrip()
+    return course
+
 
 if __name__ == "__main__":
     ics_path = Path("ScheduleFiles/")
@@ -77,15 +88,7 @@ if __name__ == "__main__":
             if (not "nextOnly" in sys.argv and startDt <= today <= endDt):
             
                 summary = str(event.get("SUMMARY"))
-                summary = summary.split(">", 1)
-                toSplit = summary[-1].split("<",1)[0]
-                toSplit = toSplit.split("-")
-                course = toSplit[-1]
-
-
-                if(course[-1]=="F" or course[-1]=="W"):
-                    course = course[0:-2]
-                    course = course.rstrip()
+                course = toCourse(summary)
                 
                 endTime = endDt.time().strftime("%I:%M %p")
                 startTime = startDt.time().strftime("%I:%M %p")
@@ -105,14 +108,7 @@ if __name__ == "__main__":
 
 
                 summary = str(event.get("SUMMARY"))
-                summary = summary.split(">", 1)
-                toSplit = summary[-1].split("<",1)[0]
-                toSplit = toSplit.split("-")
-                course = toSplit[-1]
-
-                if(course[-1]=="F" or course[-1]=="W"):
-                    course = course.split(course[-1])[0]
-                    course = course.rstrip()
+                course = toCourse(summary)
                 
                 endTime = endDt.time().strftime("%I:%M %p")
                 startTime = startDt.time().strftime("%I:%M %p")
@@ -134,3 +130,5 @@ if __name__ == "__main__":
      
             print("They will start at {fst}, which is {fsm} minutes from now.".format(fst=nextCourse["startTime"], fsm = nextCourse["minToStart"]))
             print("They will end at {fet}.\n".format(fet = nextCourse["endTime"]))
+
+
