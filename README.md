@@ -1,11 +1,12 @@
 # Lecture Hall Checker
 
+### Attention: as of February 11, 2025, Carleton's room schedule site no longer shows course or time details, effectively making this useless. 😥
+
 This Python script checks what classes are happening inside Carleton University's lecture halls at the time the script runs. <br>
 Download the **monthly** iCalendar files from the lecture halls you would like to use, then add them to the ScheduleFiles folder.<br>
 These files are named by Carleton's building and room code (i.e. AB 000 or AB 0000), which is crucial to correctly displaying lecture hall code names.<br>
 Merged classes will show two classes in the terminal, each with separate course codes.<br>
 
-[Link to lecture hall schedules](https://booking.carleton.ca/index.php?p=RoomSearch&r=1) <br>
 
 ## Necessary Installations:
 >**PiP is required**
