@@ -1,6 +1,6 @@
 # Lecture Hall Checker
 
-### Attention: as of February 11, 2025, Carleton's room schedule site no longer shows course or time details, effectively making this useless. 😥
+### Attention: as of February 11, 2025, Carleton's room schedule site (and the .ics files) no longer shows course or time details, effectively making this useless. 😥
 
 This Python script checks what classes are happening inside Carleton University's lecture halls at the time the script runs. <br>
 Download the **monthly** iCalendar files from the lecture halls you would like to use, then add them to the ScheduleFiles folder.<br>
